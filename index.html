@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python Basis | Mijn Programmeerportfolio</title>
+<style>
+:root{
+  --bg:#0b1020; --card:#121a2e; --card2:#18223b; --text:#edf2ff;
+  --muted:#aab5cf; --accent:#6ea8fe; --accent2:#8b7cff; --line:#263453;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:linear-gradient(180deg,#080d19 0%,#0d1426 100%);color:var(--text);line-height:1.65}
+header{padding:80px 20px 70px;text-align:center;background:radial-gradient(circle at 50% 0%,rgba(110,168,254,.2),transparent 45%)}
+.badge{display:inline-block;padding:7px 14px;border:1px solid var(--line);border-radius:999px;color:#cbd8ff;background:rgba(255,255,255,.04);font-size:.9rem}
+h1{font-size:clamp(2.4rem,7vw,5rem);line-height:1.05;margin:18px 0 14px}
+.hero p{max-width:720px;margin:auto;color:var(--muted);font-size:1.08rem}
+nav{position:sticky;top:0;z-index:10;background:rgba(8,13,25,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);overflow-x:auto}
+.nav-inner{max-width:1150px;margin:auto;padding:12px 18px;display:flex;gap:8px;white-space:nowrap}
+nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:9px;font-size:.9rem}
+nav a:hover{color:white;background:var(--card2)}
+main{max-width:1100px;margin:auto;padding:55px 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.card{background:linear-gradient(145deg,var(--card),#0f172a);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:0 12px 30px rgba(0,0,0,.16)}
+.card:hover{transform:translateY(-2px);transition:.2s}
+.number{color:var(--accent);font-weight:800;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+h2{margin:5px 0 14px;font-size:1.55rem}
+h3{font-size:1.05rem;margin:22px 0 8px}
+p{margin:8px 0;color:#d8e0f4}
+ul{padding-left:22px;color:#d8e0f4}
+code{font-family:"SFMono-Regular",Consolas,monospace}
+pre{background:#080d18;border:1px solid #202d49;border-radius:12px;padding:15px;overflow:auto;color:#dce7ff;margin:12px 0}
+.inline{background:#202b45;border-radius:5px;padding:2px 6px;color:#dce7ff}
+.note{margin-top:16px;padding:13px 15px;border-left:3px solid var(--accent);background:rgba(110,168,254,.07);border-radius:8px;color:#cbd7ef}
+.hero-btn{display:inline-block;margin-top:25px;background:var(--accent);color:#07101f;text-decoration:none;font-weight:800;padding:12px 18px;border-radius:10px}
+footer{text-align:center;color:var(--muted);padding:35px 20px;border-top:1px solid var(--line)}
+@media(max-width:600px){header{padding:60px 18px}.card{padding:21px}main{padding:35px 14px}}
+</style>
+</head>
+<body>
+<header id="top">
+  <div class="hero">
+    <span class="badge">Python · Programmeerportfolio</span>
+    <h1>Python Basis</h1>
+    <p>Een overzicht van de programmeeronderdelen die we hebben geleerd en gebruikt in onze programma's, zoals de rekenmachine en het raadspel.</p>
+    <a class="hero-btn" href="#onderwerpen">Bekijk de onderwerpen ↓</a>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#variables">Variables</a><a href="#datatypes">Data types</a><a href="#operators">Operators</a>
+    <a href="#conditions">If / Else</a><a href="#loops">Loops</a><a href="#comments">Comments</a>
+    <a href="#input">Input</a><a href="#print">Print</a><a href="#modules">Modules</a>
+    <a href="#indentation">Indentation</a><a href="#git">Git</a><a href="#github">GitHub</a><a href="#linux">Linux</a>
+  </div>
+</nav>
+
+<main id="onderwerpen">
+<div class="grid">
+
+<section class="card" id="variables">
+<span class="number">01 · Variables</span>
+<h2>Variables</h2>
+<h3>Wat is het?</h3>
+<p>Een variabele is een soort opslagplaats waarin je informatie kunt bewaren. Je geeft deze opslagplaats een naam, zodat je de informatie later kunt gebruiken.</p>
+<h3>Hoe hebben wij dit gebruikt?</h3>
+<p>Bij onze rekenmachine gebruikten we variabelen om de getallen die de gebruiker invoert op te slaan.</p>
+<pre><code>getal_1 = 5
+getal_2 = 10</code></pre>
+<p>Hierdoor wordt <code class="inline">getal_1</code> opgeslagen als 5 en <code class="inline">getal_2</code> als 10.</p>
+</section>
+
+<section class="card" id="datatypes">
+<span class="number">02 · Data types</span>
+<h2>Data types</h2>
+<p>Data types geven aan wat voor soort waarde een variabele is. Wij hebben het gehad over: integer, float, string en list.</p>
+<h3>Integer</h3><p>Een integer is een heel getal, zonder decimalen.</p>
+<pre><code>getal_1 = 10</code></pre>
+<h3>Float</h3><p>Een float is een getal met decimalen.</p>
+<pre><code>getal_2 = 10.5</code></pre>
+<h3>String</h3><p>Een string is tekst. De tekst staat altijd tussen enkele of dubbele aanhalingstekens.</p>
+<pre><code>naam = "jathan"</code></pre>
+<h3>List</h3><p>Een list is een lijst waarin je meerdere waarden kunt opslaan.</p>
+<pre><code>getallen = [0, 3, 5, 1, 7]</code></pre>
+<div class="note">Bij onze programma's waren integers en floats vooral handig voor de rekenmachine en strings voor teksten en invoer.</div>
+</section>
+
+<section class="card" id="operators">
+<span class="number">03 · Operators</span><h2>Operators</h2>
+<p>Operators zijn tekens waarmee je kunt rekenen of dingen kunt vergelijken.</p>
+<pre><code>+  optellen
+-  aftrekken
+*  vermenigvuldigen
+/  delen</code></pre>
+<p>Bij onze rekenmachine hebben we operators veel gebruikt.</p>
+</section>
+
+<section class="card" id="conditions">
+<span class="number">04 · Conditional statements</span><h2>If en Else</h2>
+<p>Met <code class="inline">if</code> en <code class="inline">else</code> kan de computer een beslissing maken.</p>
+<h3>Voorbeeld bij ons gokspel</h3>
+<pre><code>if gok == geheim_getal:
+    print("goed geraden")
+else:
+    print("fout")</code></pre>
+</section>
+
+<section class="card" id="loops">
+<span class="number">05 · Loops</span><h2>While en For</h2>
+<p>Een loop zorgt ervoor dat een stukje code meerdere keren wordt uitgevoerd.</p>
+<h3>While</h3>
+<p>Een while-loop blijft doorgaan zolang een bepaalde voorwaarde waar is.</p>
+<pre><code>while gok != geheim_getal:
+    gok = int(input("raad het getal: "))</code></pre>
+<p>Dit is handig voor ons raadspel, omdat je meestal vaker dan één keer moet raden om het getal te vinden.</p>
+<h3>For</h3>
+<p>Een for-loop gebruik je wanneer je iets een bepaald aantal keer wilt uitvoeren of door een lijst wilt gaan.</p>
+<pre><code>for getal in (1, 2, 3, 4, 5):
+    print(getal)</code></pre>
+</section>
+
+<section class="card" id="comments">
+<span class="number">06 · Comments</span><h2>Comments</h2>
+<p>Comments zijn opmerkingen in je code die de computer niet uitvoert. Je gebruikt ze om uit te leggen wat er gebeurt.</p>
+<pre><code># dit vraagt de gebruiker om een getal</code></pre>
+</section>
+
+<section class="card" id="input">
+<span class="number">07 · Input</span><h2>Input</h2>
+<p>Met <code class="inline">input</code> kan de gebruiker iets invoeren.</p>
+<pre><code>naam = input("wat is je naam? ")</code></pre>
+<p>Bij onze rekenmachine gebruiken we input ook om de getallen van de gebruiker te weten.</p>
+<h3>Voorbeeld rekenmachine</h3>
+<pre><code>getal_1 = input("geef het eerste getal: ")</code></pre>
+</section>
+
+<section class="card" id="print">
+<span class="number">08 · Print</span><h2>Print</h2>
+<p>Met <code class="inline">print</code> laat je iets zien op het scherm.</p>
+<pre><code>print("welkom bij de rekenmachine")</code></pre>
+<p>Bij onze programma's gebruikten we dit om bijvoorbeeld het antwoord van de berekening of de uitslag van het spel te laten zien.</p>
+</section>
+
+<section class="card" id="modules">
+<span class="number">09 · Importing modules</span><h2>Modules · Random</h2>
+<p>Een module bevat code die je kunt gebruiken in je eigen programma. Met <code class="inline">import</code> gebruik je de module.</p>
+<p>Voor ons getallenspel gebruikten we de random-module om een willekeurig getal te kiezen.</p>
+<h3>Voorbeeld random-module</h3>
+<pre><code>import random
+
+geheim_getal = random.randint(1, 100)</code></pre>
+<p>Door deze module kiest Python een willekeurig getal tussen 1 en 100.</p>
+</section>
+
+<section class="card" id="indentation">
+<span class="number">10 · Indentation</span><h2>Indentation</h2>
+<p>Een indentation betekent dat regels code inspringen. In Python is dit heel belangrijk, omdat Python hiermee ziet welke code bij elkaar hoort.</p>
+<pre><code>if getal &gt; 10:
+    print("het getal is groter dan 10")</code></pre>
+<p>Je ziet hier dat er een tab of spaties staan vóór de <code class="inline">print</code>. Dat is de indentation.</p>
+<div class="note">Indentation is heel belangrijk bij Python. Als je die verkeerd gebruikt, kan de code niet werken.</div>
+</section>
+
+<section class="card" id="git">
+<span class="number">11 · Git</span><h2>Git</h2>
+<p>Git is een programma waarmee je de veranderingen in je code kunt bijhouden.</p>
+<p>Je kunt het zien als een soort geschiedenis van je project. In Git houd je de verschillende versies van je code bij.</p>
+</section>
+
+<section class="card" id="github">
+<span class="number">12 · GitHub</span><h2>GitHub</h2>
+<p>GitHub is een online platform waar je Git-projecten kunt opslaan en delen.</p>
+<p>Je kunt bijvoorbeeld een Python-code op GitHub zetten zodat je:</p>
+<ul>
+<li>je code kunt bewaren;</li>
+<li>vanaf een andere computer bij je code kunt komen;</li>
+<li>samen kunt werken aan één code;</li>
+<li>je code met anderen kunt delen.</li>
+</ul>
+<h3>Git vs. GitHub</h3>
+<p>Git houdt de geschiedenis van je code bij. GitHub is een online platform waar je je Git-projecten kunt opslaan en delen.</p>
+</section>
+
+<section class="card" id="linux">
+<span class="number">13 · Basic Linux commands</span><h2>Linux commands</h2>
+<p>We hebben ook een aantal basiscommando's voor Linux geleerd: <code class="inline">ls</code>, <code class="inline">cd</code>, <code class="inline">mkdir</code> en <code class="inline">touch</code>.</p>
+<h3>ls</h3><p>Met <code class="inline">ls</code> zie je welke bestanden en mappen zich in de huidige map bevinden.</p>
+<h3>cd</h3><p>Met <code class="inline">cd</code> kun je veranderen van map.</p>
+<h3>mkdir</h3><p>Met <code class="inline">mkdir</code> maak je een nieuwe map aan.</p>
+<pre><code>mkdir python</code></pre>
+<p>Hiermee maak je een map met de naam <code class="inline">python</code>.</p>
+<h3>touch</h3><p>Met <code class="inline">touch</code> kun je een nieuw leeg bestand maken.</p>
+<pre><code>touch rekenmachine.py</code></pre>
+<p>Hiermee maak je bijvoorbeeld een nieuw Python-bestand met de naam <code class="inline">rekenmachine.py</code>.</p>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <p>Python Basis · Programmeerportfolio</p>
+  <p><a href="#top" style="color:var(--accent)">↑ Terug naar boven</a></p>
+</footer>
+</body>
+</html>
